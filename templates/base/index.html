@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+{% load api_types%}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    {% include 'fragments/sidebar/sidebar.html' %}
+    <div class="p-4 md:ml-64 h-full">
+        <div class="grid grid-cols-3">
+            <h1 class="col-start-2 col-end-3 border-b border-gray-400 pb-2 dark:border-gray-700 text-center text-2xl font-bold">Test Title</h1>
+        </div>
+        <p>AAAAA TEST</p>
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

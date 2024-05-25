@@ -8,6 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+db.password.txt
 build/
 develop-eggs/
 .venv
