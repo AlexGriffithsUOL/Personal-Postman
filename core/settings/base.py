@@ -71,6 +71,8 @@ INSTALLED_APPS = [
     "theme",
     "core",
     "base",
+    "api",
+    "user_management",
 ]
 
 MIDDLEWARE = [
@@ -136,6 +138,8 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
+
+AUTH_USER_MODEL = "user_management.TestUser"
 
 
 # Internationalization

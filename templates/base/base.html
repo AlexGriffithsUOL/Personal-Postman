@@ -15,10 +15,13 @@
     </style>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 dark:bg-gray-700">
     <div>
-        {% block content %}
-        {% endblock %}
+        {% include 'fragments/sidebar/sidebar.html' %}
+        <div class="p-4 md:ml-64 h-full">
+            {% block content %}
+            {% endblock %}
+        </div>
     </div>
 
     <div>

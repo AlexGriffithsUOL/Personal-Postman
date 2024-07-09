@@ -19,13 +19,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from . import views
 
-app_name = 'base'
+app_name = 'api'
 
 urlpatterns = [
-    path("home/", view=views.index.as_view(), name="home"),
-    path('api/', include('api.urls'))
+    path("details/<int:api_call_id>/", view=views.api_details.as_view(), name="details"),
 ]
-
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

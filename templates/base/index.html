@@ -4,13 +4,22 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    {% include 'fragments/sidebar/sidebar.html' %}
-    <div class="p-4 md:ml-64 h-full">
-        <div class="grid grid-cols-3">
-            <h1 class="col-start-2 col-end-3 border-b border-gray-400 pb-2 dark:border-gray-700 text-center text-2xl font-bold">Test Title</h1>
-        </div>
-        <p>AAAAA TEST</p>
+    <div class="grid grid-cols-3">
+        <h1 class="col-start-2 col-end-3 border-b border-gray-400 pb-2 dark:border-gray-700 text-center text-2xl font-bold">Test Title</h1>
     </div>
+    {% for call in api_calls %}
+    <li class="list-none">
+        <a
+            href="#"
+            class="flex items-center gap-2 text-gray-900 rounded-lg dark:text-white group"
+            >
+                {{ call.api_type | api_type }}
+                <span class="text-left">Test API Call</span>
+        </a>
+    </li>
+    {% endfor %}
+    {{ api_calls }}
+    <p>AAAAA TEST</p>
 {% endblock %}
 
 {% block footer %}
